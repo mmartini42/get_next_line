@@ -6,7 +6,7 @@
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:33:54 by mathmart          #+#    #+#             */
-/*   Updated: 2021/11/06 19:08:53 by mathmart         ###   ########.fr       */
+/*   Updated: 2021/11/11 18:05:07 by mathmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+# include <stdio.h>
 
-# define BUFFER_SIZE 12
+# define TRUE 1
+# define FALSE -1
 
-short	ft_get_nl(char *bakup);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(const char *s1, const char *s2);
-char	*ft_strcpy(char *dest, const char *str);
-size_t	ft_strlen(const char *str);
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+
+# endif
+
+char	*get_next_line(int fd);
 
 #endif
