@@ -6,7 +6,7 @@
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 06:56:25 by mathmart          #+#    #+#             */
-/*   Updated: 2021/11/13 07:54:27 by mathmart         ###   ########.fr       */
+/*   Updated: 2021/11/13 08:27:53 by mathmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static int	ft_get_read(int fd, char **backup, char **line, int eof)
 			if (*backup)
 				free(*backup);
 			*backup = NULL;
-			return (0);
+			return (*line && (*line)[eof] != '\0');
 		}
 		buff[eof] = '\0';
 		*line = ft_spe_join(*line, buff);
